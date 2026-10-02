@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#100d18" />
+    <title>Contador | Toques</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#inicio" aria-label="Contador de toques, início">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+          <span class="brand-name">CONTADOR<span>.</span></span>
+        </a>
+        <div class="topbar-status"><span class="status-dot"></span> PRONTO PARA CONTAR</div>
+      </header>
+
+      <main id="inicio">
+        <section class="intro" aria-labelledby="page-title">
+          <p class="eyebrow"><span class="eyebrow-line"></span> CONTAGEM SIMPLES</p>
+          <h1 id="page-title">SEU CONTADOR<br /><span>DE TOQUES.</span></h1>
+          <p class="intro-copy">Conte toques com facilidade. Seu número fica salvo neste dispositivo.</p>
+        </section>
+
+        <section class="counter-panel" aria-label="Contador de toques">
+          <div class="counter-heading">
+            <label class="counter-label" for="counter-name">NOME DA CONTAGEM</label>
+            <input id="counter-name" type="text" maxlength="40" placeholder="Ex.: Peças separadas" autocomplete="off" />
+          </div>
+
+          <div class="count-display" aria-live="polite" aria-atomic="true">
+            <span class="count-label">TOTAL DE TOQUES</span>
+            <output id="tap-count">0</output>
+            <span class="count-caption">TOQUES REGISTRADOS</span>
+          </div>
+
+          <button class="add-button" id="add-button" type="button" aria-label="Adicionar um toque">
+            <span class="add-icon" aria-hidden="true">+</span>
+            <span>ADICIONAR TOQUE</span>
+          </button>
+
+          <div class="counter-actions" aria-label="Ações do contador">
+            <button class="action-button" id="undo-button" type="button" aria-label="Desfazer último toque" disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14 4 9l5-5M4 9h10a6 6 0 0 1 0 12h-2" /></svg>
+              <span>DESFAZER</span>
+            </button>
+            <span class="action-divider" aria-hidden="true"></span>
+            <button class="action-button action-reset" id="reset-button" type="button" aria-label="Zerar contador">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6m4-6v6M6 7l1 13h10l1-13M9 7V4h6v3" /></svg>
+              <span>ZERAR</span>
+            </button>
+          </div>
+          <p class="save-note"><span class="save-dot"></span> CONTAGEM SALVA AUTOMATICAMENTE</p>
+        </section>
+
+        <footer class="page-footer">
+          <span>UM TOQUE DE CADA VEZ.</span>
+          <span class="footer-right">CONTADOR <i>·</i> FERRAMENTA DE TRABALHO</span>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
